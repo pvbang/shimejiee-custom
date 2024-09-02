@@ -1,5 +1,28 @@
+## Shimeji-ee custom by pvbang
 ![Hình ảnh Demo](demo.png)
 
+
+## If you do not have Java 8 installed
+```sh
+jre-8u411-windows-x64.exe
+```
+
+
+## Run
+```bash
+Shimeji-ee.jar
+```
+
+
+## Pet Downloads
+```sh
+https://www.deviantart.com/shimejidesktoppets/gallery
+
+# Hoặc tìm kiếm Tên nhân vật + Shimeji
+```
+
+
+## Original
 Shimeji-ee: Shimeji English Enhanced
 
 Shimeji-ee is a Windows desktop mascot that freely wanders and plays around the screen.  The mascot is very configurable; its actions are defined through xml and its animations/images can be (painstakingly) customized.  Shimeji was originally created by Yuki Yamada of Group Finity (http://www.group-finity.com/Shimeji/).  This branch of the original Shimeji project not only translates the program/source to English, but adds additional enhancements to Shimeji by Kilkakon and other members of the community.

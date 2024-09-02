@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Mascot xmlns="http://www.group-finity.com/Mascot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.group-finity.com/Mascot Mascot.xsd">
+
+	<BehaviorList>
+	
+		<!-- ALWAYS REQUIRED -->
+		<Behavior Name="ChaseMouse" Frequency="0" Hidden="true">
+			<NextBehaviorList Add="false">
+				<BehaviorReference Name="Stand" Frequency="1" />
+			</NextBehaviorList>
+		</Behavior>
+		
+		<!-- ALWAYS REQUIRED -->
+		<Behavior Name="Fall" Frequency="0" Hidden="true" />
+		
+		<!-- ALWAYS REQUIRED -->
+		<Behavior Name="Dragged" Frequency="0" Hidden="true" />
+		
+		<!-- ALWAYS REQUIRED -->
+		<Behavior Name="Thrown" Frequency="0" Hidden="true" />
+		
+		<Behavior Name="SelfHatch" Frequency="0" Hidden="true">
+			<NextBehaviorList Add="false">
+				<BehaviorReference Name="Crack5" Frequency="1" />
+			</NextBehaviorList>
+		</Behavior>
+
+		<Behavior Name="Hatch" Frequency="0" Hidden="false" />
+
+		<!-- On the Floor -->
+		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
+			<Behavior Name="StandUp" Frequency="200" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="SelfHatch" Frequency="1" />
+				</NextBehaviorList>
+			</Behavior>
+		</Condition>
+		
+		<Condition Condition="#{mascot.environment.floor.isOn(mascot.anchor) || mascot.environment.activeIE.topBorder.isOn(mascot.anchor)}">
+			<Behavior Name="Laid" Frequency="1" Hidden="true" />
+		</Condition>
+		
+		<!-- Crack Animations -->
+		<Behavior Name="Crack1" Frequency="0" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="StandUp" Frequency="1" />
+				</NextBehaviorList>
+		</Behavior>
+		
+		<Behavior Name="Crack2" Frequency="0" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="Crack1" Frequency="1" />
+				</NextBehaviorList>
+		</Behavior>
+		
+		<Behavior Name="Crack3" Frequency="0" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="Crack2" Frequency="1" />
+				</NextBehaviorList>
+		</Behavior>
+		
+		<Behavior Name="Crack4" Frequency="0" Hidden="true">
+				<NextBehaviorList Add="false">
+					<BehaviorReference Name="Crack3" Frequency="1" />
+				</NextBehaviorList>
+		</Behavior>
+		
+		<Behavior Name="Crack5" Frequency="0" Hidden="true">
+			<NextBehaviorList Add="false">
+				<BehaviorReference Name="Hatch" Frequency="10" />
+			</NextBehaviorList>
+		</Behavior>
+	</BehaviorList>
+</Mascot>

@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Mascot xmlns="http://www.group-finity.com/Mascot" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.group-finity.com/Mascot Mascot.xsd">
+
+	<ActionList>
+		<Action Name="Look" Type="Embedded" Class="com.group_finity.mascot.action.Look" />
+		<Action Name="Offset" Type="Embedded" Class="com.group_finity.mascot.action.Offset" />
+
+		<!-- Standing -->
+
+		<Action Name="Stand" Type="Stay" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg1.png" ImageRight="/egg1.png" ImageAnchor="64,128" Velocity="0,0" Duration="255" />
+				
+				<Hotspot Shape="Rectangle" Origin="22,50" Size="85,78" Behavior="Crack1" />
+			</Animation>
+		</Action>
+		
+		
+		<Action Name="LaidAction" Type="Animate" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg1b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1.png" ImageAnchor="64,128" Velocity="0,0" Duration="50" />
+			</Animation>
+		</Action>
+		
+		
+		<!-- Cracks -->
+		
+		<Action Name="Crack1Action" Type="Animate" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg2.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg2.png" ImageAnchor="64,128" Velocity="0,0" Duration="25" />
+			
+				<Hotspot Shape="Rectangle" Origin="22,50" Size="85,78" Behavior="Crack2" />
+			</Animation>
+		</Action>
+		<Action Name="Crack1" Type="Sequence" Loop="false">
+			<ActionReference Name="Crack1Action" Duration="27" />
+		</Action>
+		
+		
+		<Action Name="Crack2Action" Type="Animate" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg2a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg2a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg2b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2.png" ImageAnchor="64,128" Velocity="0,0" Duration="25" />
+			
+				<Hotspot Shape="Rectangle" Origin="22,50" Size="85,78" Behavior="Crack3" />
+			</Animation>
+		</Action>
+		<Action Name="Crack2" Type="Sequence" Loop="false">
+			<ActionReference Name="Crack2Action" Duration="37" />
+		</Action>
+		
+		
+		<Action Name="Crack3Action" Type="Animate" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg3a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg3a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg3b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3.png" ImageAnchor="64,128" Velocity="0,0" Duration="25" />
+			
+				<Hotspot Shape="Rectangle" Origin="22,50" Size="85,78" Behavior="Crack4" />
+			</Animation>
+		</Action>
+		<Action Name="Crack3" Type="Sequence" Loop="false">
+			<ActionReference Name="Crack3Action" Duration="37" />
+		</Action>
+		
+		
+		<Action Name="Crack4Action" Type="Animate" BorderType="Floor" Draggable="true">
+			<Animation>
+				<Pose Image="/egg4a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg4a.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+				<Pose Image="/egg4b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4.png" ImageAnchor="64,128" Velocity="0,0" Duration="25" />
+			
+				<Hotspot Shape="Rectangle" Origin="22,50" Size="85,78" Behavior="Crack5" />
+			</Animation>
+		</Action>
+		<Action Name="Crack4" Type="Sequence" Loop="false">
+			<ActionReference Name="Crack4Action" Duration="37" />
+		</Action>
+		
+		
+		<Action Name="Crack5Action" Type="Animate" BorderType="Floor" Draggable="false">
+			<Animation>
+				<Pose Image="/egg5.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+			</Animation>
+		</Action>
+		<Action Name="Crack5" Type="Sequence" Loop="false">
+			<ActionReference Name="Crack5Action" Duration="2" />
+		</Action>
+			
+		<Action Name="SelfHatchAction" Type="Animate" Draggable="true">
+			<Animation>
+				<Pose Image="/egg1.png" ImageAnchor="64,128" Velocity="0,0" Duration="4"  />
+				<Pose Image="/egg1a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				
+				<Pose Image="/egg2.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg2c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				
+				<Pose Image="/egg3.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg3c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				
+				<Pose Image="/egg4.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg4c.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				
+				<Pose Image="/egg5.png" ImageAnchor="64,128" Velocity="0,0" Duration="21" />
+			</Animation>
+		</Action>
+		
+		
+		<!-- Falling -->
+
+		<Action Name="Falling" Type="Embedded" Class="com.group_finity.mascot.action.Fall" RegistanceX="0.05" RegistanceY="0.1" Gravity="3">
+			<Animation>
+				<Pose Image="/shime4.png" ImageRight="/shime4.png" ImageAnchor="64,128" Velocity="0,0" Duration="250" />
+			</Animation>
+		</Action>
+
+		<Action Name="Bouncing" Type="Animate" BorderType="Floor">
+			<Animation>
+				<Pose Image="/egg1a.png" ImageRight="/egg1a.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" Sound="/egg.wav" Volume="-10" />
+				<Pose Image="/egg1b.png" ImageRight="/egg1b.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+				<Pose Image="/egg1.png" ImageRight="/egg1.png" ImageAnchor="64,128" Velocity="0,0" Duration="4" />
+			</Animation>
+		</Action>
+		
+		<!-- Dragging -->
+
+		<Action Name="Pinched" Type="Embedded" Class="com.group_finity.mascot.action.Dragged" OffsetX="0" OffsetY="113">
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x-50}">
+				<Pose Image="/shime5.png" ImageAnchor="64,128" Velocity="0,0" Duration="5" />
+			</Animation>
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x-30}">
+				<Pose Image="/shime5.png" ImageAnchor="64,128" Velocity="0,0" Duration="5" />
+			</Animation>
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x-15}">
+				<Pose Image="/shime5.png" ImageAnchor="64,128" Velocity="0,0" Duration="5" />
+			</Animation>
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x-5 || FootX &lt; mascot.environment.cursor.x+5}">
+				<Pose Image="/shimeX.png" ImageAnchor="64,128" Velocity="0,0" Duration="60" />
+			</Animation>
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x+15}">
+				<Pose Image="/shime6.png" ImageAnchor="64,128" Velocity="0,0" Duration="5"/>
+			</Animation>
+			<Animation Condition="#{FootX &lt; mascot.environment.cursor.x+50}">
+				<Pose Image="/shime6.png" ImageAnchor="64,128" Velocity="0,0" Duration="5" />
+			</Animation>
+			<Animation Condition="#{FootX &gt;= mascot.environment.cursor.x+50}">
+				<Pose Image="/shime6.png" ImageAnchor="64,128" Velocity="0,0" Duration="5" />
+			</Animation>
+		</Action>
+		<Action Name="Resisting" Type="Embedded" Class="com.group_finity.mascot.action.Regist">
+			<Animation>
+				<Pose Image="/shime4.png" ImageRight="/shime4.png" ImageAnchor="64,128" Velocity="0,0" Duration="30" />
+			</Animation>
+		</Action>
+	</ActionList>
+
+	<!-- Actual Behavior -->
+	<ActionList>
+
+		<!-- ALWAYS REQUIRED -->
+		<Action Name="Fall" Type="Sequence" Loop="false">
+			<ActionReference Name="Falling"/>
+			<ActionReference Name="Bouncing"/>
+			<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+		</Action>
+
+		<!-- ALWAYS REQUIRED -->
+		<Action Name="Dragged" Type="Sequence" Loop="true">
+			<ActionReference Name="Pinched"/>
+			<ActionReference Name="Resisting" />
+		</Action>
+
+		<!-- ALWAYS REQUIRED -->
+		<Action Name="Thrown" Type="Sequence" Loop="false">
+			<ActionReference Name="Falling" InitialVX="${mascot.environment.cursor.dx}" InitialVY="${mascot.environment.cursor.dy}"/>
+			<ActionReference Name="Bouncing"/>
+			<ActionReference Name="Stand" Duration="${100+Math.random()*100}" />
+		</Action>
+
+		<Action Name="StandUp" Type="Sequence" Loop="false">
+			<ActionReference Name="Stand" Duration="${100+Math.random()*250}" />
+		</Action>
+		
+		<Action Name="Laid" Type="Sequence" Loop="false">
+			<ActionReference Name="LaidAction" />
+			<ActionReference Name="Stand" Duration="${100+Math.random()*250}" />
+		</Action>
+		
+		<Action Name="SelfHatch" Type="Sequence" Loop="false">
+			<ActionReference Name="SelfHatchAction" />
+		</Action>
+
+		<Action Name="ChaseMouse" Type="Sequence" Loop="false">
+			<ActionReference Name="Look" LookRight="${mascot.anchor.x &lt; mascot.environment.cursor.x}" />
+		</Action>
+		
+		
+		<!-- Hatch Variations Animation -->
+		
+		<Action Name="HatchMaleAction" Type="Embedded" Class="com.group_finity.mascot.action.Transform" 
+			TransformMascot="Kodachi_Buiwott" TransformBehavior="Hatch" Draggable="false">
+			<Animation>
+				<Pose Image="/egg5.png" ImageAnchor="64,128" Velocity="0,0" Duration="2" />
+			</Animation>
+		</Action>
+		
+		<!-- Hatch Variations -->
+		
+		<Action Name="Hatch" Type="Sequence" Loop="false">
+			<ActionReference Name="HatchMaleAction" />
+		</Action>
+	</ActionList>
+</Mascot>
